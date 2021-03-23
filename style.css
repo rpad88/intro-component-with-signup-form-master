@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    /* Primary colors */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral colors */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    background-image: url('/images/bg-intro-mobile.png');
+    background-color: var(--red);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 375px;
+    width: 375px;
+    height: auto;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main.container h1 {
+    padding-top: 1.9em;
+    display: block;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+main.container > p {
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    margin: 1em auto 3em auto;
+}
+
+p ~ a {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    background: var(--blue);
+    padding: 1em 3em;
+    border-radius: 10px;
+    font-weight: 400;
+    box-shadow: 0 8px rgba(0, 0, 0, 0.123);
+}
+
+main.container a strong {
+    font-weight: 600;
+}
+
+/* Forms */
+form {    
+    margin-top: 1.5em;
+    border-radius: 10px;
+    padding: 1em;
+    background: #FFF;
+    box-shadow: 0 8px rgba(0, 0, 0, 0.123);
+}
+
+form input {
+    outline: none;
+    width: 100%;
+    padding: 1em;
+    margin: .5em 0;
+    border: 0.5px solid var(--grayish-blue);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+form button {
+    display: block;
+    margin: .5em 0;
+    width: 100%;
+    color: white;
+    background: var(--green);
+    padding: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px hsl(154, 59%, 44%);
+}
+
+section form small {
+    margin: 1.5em 0 1em 0;
+    display: block;
+    color: var(--grayish-blue);
+    font-size: .6em;
+    text-align: center;
+    padding: 0 3.5em;
+}
+
+section form small a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--red);
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    display: block;
+}
