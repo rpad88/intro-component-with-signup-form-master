@@ -14,8 +14,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [Author](#author)
 
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -68,5 +66,5 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ## Author
 
-- Website - [Rodolfo](https://www.github.com/rpad88)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [@rpad88](https://www.github.com/rpad88)
+- Frontend Mentor - [@rpad88](https://www.frontendmentor.io/profile/rpad88)
