@@ -22,55 +22,58 @@
 body {
     background-image: url('/images/bg-intro-mobile.png');
     background-color: var(--red);
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    min-width: 1vw;
+    min-height: 1vh;
 }
 
 main.container {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 375px;
     width: 375px;
-    height: auto;
+    margin: 0 auto;
     padding: 2em;
-    align-items: center;
-    justify-content: center;
-
 }
 
 main.container h1 {
-    padding-top: 1.9em;
+    padding-top: 1.5em;
     display: block;
     color: white;
     font-weight: 600;
     text-align: center;
 }
 
-main.container > p {
+main.container p {
     color: #FFF;
     font-size: 16px;
     text-align: center;
-    margin: 1em auto 3em auto;
+    margin: 1em auto 2em auto;
 }
 
-p ~ a {
+:is(main.container, .half-right) > button {
     text-decoration: none;
     color: #FFF;
     text-align: center;
     background: var(--blue);
-    padding: 1em 3em;
+    padding: 1em 5em;
     border-radius: 10px;
     font-weight: 400;
     box-shadow: 0 8px rgba(0, 0, 0, 0.123);
+    outline: none;
 }
 
-main.container a strong {
+:is(main.container, .half-right) button:hover {
+    background: var(--dark-blue);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.half-right button strong {
     font-weight: 600;
 }
 
-/* Forms */
+    /* 
+    Forms
+    */
 form {    
     margin-top: 1.5em;
     border-radius: 10px;
@@ -79,19 +82,49 @@ form {
     box-shadow: 0 8px rgba(0, 0, 0, 0.123);
 }
 
+.hide { /*Erros msg and exclamation img */
+    display: none;
+}
+.form-control > small {
+    color: var(--red);
+    text-align: right;
+}
+
+.form-control {
+    /* margin-bottom: .5em; */
+    padding-bottom: 1em;
+    position: relative;
+}
+
+.form-control img {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.msgError {
+    color: var(--red);
+}
+
 form input {
     outline: none;
     width: 100%;
     padding: 1em;
-    margin: .5em 0;
     border: 0.5px solid var(--grayish-blue);
     border-radius: 5px;
     font-weight: 600;
 }
 
-form button {
+form input:hover {
+    border: 0.5px solid var(--dark-blue);
+}
+
+form input:focus {
+    border: 1px solid var(--dark-blue);
+}
+
+main.container form button {
     display: block;
-    margin: .5em 0;
     width: 100%;
     color: white;
     background: var(--green);
@@ -101,10 +134,16 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 5px hsl(154, 59%, 44%);
+    outline: none;
+    margin-bottom: 1em;
+}
+
+main.container form button:hover {
+    background: hsla(154, 59%, 51%, 0.805);
+    transition: .5s;
 }
 
 section form small {
-    margin: 1.5em 0 1em 0;
     display: block;
     color: var(--grayish-blue);
     font-size: .6em;
@@ -119,7 +158,66 @@ section form small a {
     font-weight: 700;
 }
 
-/* Footer */
+section form small a:hover {
+    text-shadow: 0 0 0.2px var(--red);
+    transition: .5s;
+}
+
+    /* Footer */
 footer {
     display: block;
+}
+
+@media (min-width: 900px) {
+    body{
+        align-items: center;
+        justify-content: center;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    
+    main.container {
+        /* margin: 10em auto 0;; */
+        display: flex;
+        flex-flow: column wrap;
+        justify-self: center;
+        align-self: center;
+        width: 900px;
+        height: 600px;
+        padding: .5em;
+        justify-content: center;
+    }
+
+    main.container form {
+        padding: 1.5em;
+    }
+
+    .half-left {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    .half-right {
+        display: flex;
+        flex-direction: column;
+        width: 50%;        
+    }
+    :is(main.container) h1 {
+        text-align: left;
+        padding: 1em 2em 0 0;
+        font-weight: 600;
+    }
+    :is(main.container) p {
+        text-align: left;
+        font-size: .8em;               
+    }
+
+    form {
+        height: auto;
+    }
+
+
 }

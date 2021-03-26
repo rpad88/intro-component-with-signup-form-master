@@ -10,7 +10,6 @@
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -20,29 +19,47 @@
 <body>
 
   <main class="container">
-
-    <h1>Learn to code by watching others</h1>
-    
-    <p>
-      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-    but understanding how developers think is invaluable.
-    </p>
+    <div class="half-left">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable.
+      </p>
+    </div>    
    
-    <a href="">
-      <strong>Try it free 7 days</strong>  then $20/mo. thereafter
-    </a>
-  
-    <section title="form">
-      <form action="" method="post">
-        <input type="text" name="name" placeholder="First Name">
-        <input type="text" name="lastName" placeholder="Last Name">
-        <input type="email" name="email" id="" placeholder="Email Address">
-        <input type="password" name="pwd" id="" placeholder="Password">
-        <button type="submit">CLAIM YOUR FREE TRIAL</button>
+    <div class="half-right">
+      <button href="">
+        <strong>Try it free 7 days</strong>  then $20/mo. thereafter
+      </button>
+    
+      <section title="forms">
+        <form action="" method="post" name="form" id="form">
+          <div class="form-control">
+            <input type="text" name="name" id="name" placeholder="First Name" >
+            <img src="/images/icon-error.svg" class="hide">
+            <small class="hide"></small>
+          </div>
+          <div class="form-control">
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name" >
+            <img src="/images/icon-error.svg" class="hide">
+            <small class="hide"></small>
+          </div>
+          <div class="form-control">
+            <input type="email" name="email" id="email" placeholder="Email Address" >
+            <img src="/images/icon-error.svg" class="hide">
+            <small class="hide"></small>
+          </div>
+          <div class="form-control">
+            <input type="password" name="pwd" id="pwd" placeholder="Password" >
+            <img src="/images/icon-error.svg" class="hide">
+            <small class="hide"></small>
+          </div>
 
-        <small>By clicking the button, you are agreeing to our <a href="">Terms and Services</a> </small>
-      </form>
-    </section>
+          <button type="submit" id="submit">CLAIM YOUR FREE TRIAL</button>  
+          <small>By clicking the button, you are agreeing to our <a href="">Terms and Services</a> </small>
+        </form>
+      </section>
+    </div>
      
   </main>
   
@@ -52,5 +69,7 @@
       Coded by <a href="https://github.com/rpad88" target="_blank">rpad88</a>.
     </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
